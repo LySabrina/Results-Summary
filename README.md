@@ -75,6 +75,15 @@ While I was working on the Desktop view, I had issues on getting the `results-co
 
 Now the next issue was that `results-container` did not stretch the whole height of the parent container. The issues was I was using: `height:40%` which forces the height of the `results-container` to be that exact 40% width. This will hold higher precedence even if I attempt to use min or max. So I changed it to `min-width:40%` such that it should be at least 40% of the height for the parent container ( main purpose is for the mobile design) and if necessary, grow (for the desktop design)
 
+```css
+min-height: 40%;
+/* height: 40%;  
+     Don't use the defined height and width (better to use min or max). This can cause problems 
+     This causes error because it will be strictly at 40% width even if you attempt to use min/max in
+     the media query. It will stay strictly at 40% even when trying to switch min/max in media query 
+  */
+```
+
 ### Continued development
 
 I am satisfied with the project. I will need to continue understanding how to better structure my HTML and using flexbox more.

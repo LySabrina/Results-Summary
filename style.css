@@ -48,11 +48,7 @@ main {
   text-align: center;
   border-radius: 0px 0px 1.5em 1.5em;
   min-height: 40%;
-  /* height: 40%;  
-     Don't use the defined height and width (better to use min or max). This can cause problems 
-     This causes error because it will be strictly at 40% width even if you attempt to use min/max in
-     the media query. It will stay strictly at 40% even when trying to switch min/max in media query 
-  */
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,8 +118,7 @@ main {
 }
 
 .summary-container > button {
-  min-width: 100%;
-
+  width: 100%;
   background-color: var(--c-dark-gray-blue);
   color: var(--c-netural-white);
   padding: 1em;
