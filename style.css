@@ -152,15 +152,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   .card {
     display: flex;
     box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
     border-radius: 1.5em;
-    max-height: 50%;
-   
   }
   .results-container {
     border-radius: 1.5em;
