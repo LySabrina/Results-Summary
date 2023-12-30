@@ -1,0 +1,179 @@
+:root {
+  --c-red: hsl(0, 100%, 67%, 10%);
+  --c-orange-yellow: hsl(39, 100%, 56%, 10%);
+  --c-green-teal: hsl(166, 100%, 37%, 10%);
+  --c-cobalt-blue: hsl(234, 85%, 45%, 10%);
+
+  --c-netural-white: hsl(0, 0%, 100%);
+  --c-pale-blue: hsl(221, 100%, 96%);
+  --c-light-lavendar: hsl(241, 100%, 89%);
+  --c-dark-gray-blue: hsl(224, 30%, 27%);
+
+  --g-blue-slate: hsl(252, 100%, 67%);
+  --g-blue-royal: hsl(241, 81%, 54%);
+
+  --g-circle-violet: hsl(256, 72%, 46%, 1);
+  --g-circle-persian: hsl(241, 72%, 46%, 0);
+
+  --ff-base: "Hanken Grotesk", sans-serif;
+  --fw-light: 500;
+  --fw-regular: 700;
+  --fw-bold: 800;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-base);
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+}
+
+.card {
+  height: 100%;
+}
+
+/*
+  Results Container
+*/
+.results-container {
+  background: linear-gradient(var(--g-blue-slate), var(--g-blue-royal));
+  color: white;
+  text-align: center;
+  border-radius: 0px 0px 1.5em 1.5em;
+  min-height: 40%;
+  /* height: 40%;  
+     Don't use the defined height and width (better to use min or max). This can cause problems 
+     This causes error because it will be strictly at 40% width even if you attempt to use min/max in
+     the media query. It will stay strictly at 40% even when trying to switch min/max in media query 
+  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em;
+  justify-content: space-around;
+}
+
+.score {
+  background: linear-gradient(var(--g-circle-violet), var(--g-circle-persian));
+  min-width: 8em;
+  min-height: 8em;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+.score > h1 {
+  font-size: 3rem;
+}
+.score > h1 + p {
+  font-size: 0.8rem;
+  color: var(--c-light-lavendar);
+}
+
+.results-container > h3 + p {
+  color: var(--c-light-lavendar);
+}
+
+/* 
+  Summary Container
+*/
+
+.summary-container {
+  margin: 1em;
+  padding: 1em;
+  max-height: 100%;
+}
+
+.summary-container > ul {
+  list-style: none;
+}
+
+.summary-item {
+  border-radius: 0.5em;
+  padding: 1em;
+  display: flex;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.summary-item > img + p {
+  margin-left: 0.5em;
+  flex: 4;
+}
+
+.summary-item > p + p {
+  font-weight: var(--fw-light);
+  color: var(--c-dark-gray-blue);
+}
+
+.summary-item > p > span {
+  font-weight: var(--fw-bold);
+  color: var(--c-dark-gray-blue);
+}
+
+.summary-container > button {
+  min-width: 100%;
+
+  background-color: var(--c-dark-gray-blue);
+  color: var(--c-netural-white);
+  padding: 1em;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.summary-container > button:hover {
+  background: linear-gradient(var(--g-blue-slate), var(--g-blue-royal));
+}
+
+.reaction {
+  background-color: var(--c-red);
+  color: hsl(0, 100%, 67%);
+}
+
+.memory {
+  color: hsl(39, 100%, 56%);
+  background-color: var(--c-orange-yellow);
+}
+
+.verbal {
+  background-color: var(--c-green-teal);
+  color: hsl(166, 100%, 37%);
+}
+
+.visual {
+  background-color: var(--c-pale-blue);
+  color: hsl(234, 85%, 45%);
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    border-radius: 1.5em;
+  }
+  .results-container {
+    border-radius: 1.5em;
+    flex: 1;
+  }
+
+  .summary-container {
+    flex: 1;
+  }
+}

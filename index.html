@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Style-->
+    <link href="style.css" rel="stylesheet" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div class="results-container">
+          <p>Your Result</p>
+
+          <div class="score">
+            <h1>76</h1>
+            <p>of 100</p>
+          </div>
+
+          <h3>Great</h3>
+          <p>
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+
+        <div class="summary-container">
+          <h3>Summary</h3>
+          <ul>
+            <li>
+              <div class="summary-item reaction">
+                <img src="./assets/images/icon-reaction.svg" />
+                <p>Reaction</p>
+                <p><span>80</span> / 100</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="summary-item memory">
+                <img src="./assets/images/icon-memory.svg" />
+                <p>Memory</p>
+                <p><span>92</span> / 100</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="summary-item verbal">
+                <img src="./assets/images/icon-verbal.svg" />
+                <p>Verbal</p>
+                <p><span>61</span> / 100</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="summary-item visual">
+                <img src="./assets/images/icon-visual.svg" />
+                <p>Visual</p>
+                <p><span>72</span> / 100</p>
+              </div>
+            </li>
+          </ul>
+          <button>Continue</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
