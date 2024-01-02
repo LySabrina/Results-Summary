@@ -51,6 +51,7 @@ body {
   align-items: center;
   padding: 1.5em;
   justify-content: space-around;
+  row-gap: 0.5em;
 }
 
 .score {
@@ -72,6 +73,7 @@ body {
   font-size: 0.8rem;
   color: var(--c-light-lavendar);
 }
+
 
 .results-container > h3 + p {
   color: var(--c-light-lavendar);
@@ -154,16 +156,28 @@ body {
     align-items: center;
   }
 
+  main{
+    display: flex;
+    justify-content: center;
+
+  }
   .card {
     display: flex;
+    justify-content: center;
+
+    max-width: 75%;
     box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
     border-radius: 1.5em;
+    /* max-height: 50%; */
   }
   .results-container {
     border-radius: 1.5em;
     flex: 1;
+    
   }
-
+  .results-container > h3 {
+    font-size: 1.5em;
+  }
   .summary-container {
     flex: 1;
   }
